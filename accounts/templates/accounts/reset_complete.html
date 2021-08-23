@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} Redefinição de senha | Sucesso {% endblock title %}
+{% block main %}
+<div class="container-login">
+    <div class="card-login">
+        <h1 class="h1-login">Redefinição de senha concluída</h1>
+        <div class="justify-center">
+            <hr>
+        </div>
+        <div class="justify-center">
+            <p>Sua senha foi alterada com sucesso.</p>
+        </div>
+        <div class="justify-center">
+            <p>Clique no botao abaixo para efetuar login</p>
+        </div>
+        <div class="justify-center">
+            <hr>
+        </div>
+        <div class="justify-center">
+            <button type="submit" class="btn-login"><a class="a-login" href="{% url 'login' %}">Login</a></button>
+        </div>
+    </div>
+</div>
+{% endblock %}

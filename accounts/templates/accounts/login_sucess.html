@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Dev Marcos | Inicio {% endblock %}
+{% block main %}
+{% include 'parciais/messages.html' %}
+<h1>Sucesso</h1>
+<br>
+<p>voce esta logado como {{user.first_name}} {{user.last_name}}</p>
+<p>usuario: {{user}}</p>
+<a href="{% url 'logout' %}">Sair</a>
+{% endblock %}

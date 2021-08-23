@@ -1,0 +1,13 @@
+<div class="menu-nav">
+    <img src="" class="logo">
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        {% if user.is_authenticated  %}
+        <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li><a href="{% url 'logout' %}">Sair</a></li>
+        {% else %}
+        <li><a href="">Sobre</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+    </ul>
+</div>

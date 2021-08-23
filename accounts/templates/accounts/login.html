@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block main %}
+{% include 'parciais/messages.html' %}
+{% if not user.is_authenticated %}
+<div class="container-login">
+    <div class="card-login">
+        <h1 class="h1-login">Login</h1>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="label-float">
+                <input type="text" name="usuario" value="{{request.POST.usuario}}" required>
+                <label >Usuário</label>
+            </div>
+            <div class="label-float">
+                <input type="password" name="senha" value="{{request.POST.senha}}" required >
+                <label >Senha</label>
+            </div>
+            <div class="justify-center">
+                <button type="submit" class="btn-login">Entrar</button>
+            </div>
+            <div class="justify-center">
+                <hr>
+            </div>
+        
+            <div class="p-login">
+                <p>Não tem uma conta? <a href="{% url 'cadastrar' %}" class="a-login">Cadastrar-se</a></p>
+                <p>Não consegue acessar? <a href="{% url 'reset_password' %}" class="a-login">Esqueci minha senha</a></p> 
+            </div>
+        </form>
+    </div>
+</div>
+{% else %}
+<div>
+    <p>você esta logado como ({{user}})</p>
+    <a href="{% url 'logout' %}">clique aqui</a> para sair
+</div>
+<br>
+{% endif %}
+{% endblock %}

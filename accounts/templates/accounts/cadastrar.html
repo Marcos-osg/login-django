@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Cadastro {% endblock %}
+{% block main %}
+{% include 'parciais/messages.html' %}
+<div class="container-cad">
+    <div class="card-cadastro">
+        <h1 class="h1-login">Cadastro</h1>
+        <form method="POST" action="{% url 'cadastrar' %}">
+            {% csrf_token %}
+            <div class="label-float">
+                <input type="text" name="nome"  value="{{request.POST.nome}}" required>    
+                <label>Nome</label>
+            </div>
+            <div class="label-float">
+                <input type="text" name="sobrenome" value="{{request.POST.sobrenome}}" required>
+                <label>Sobrenome</label>
+            </div>
+            <div class="label-float">
+                <input type="email" name="email" value="{{request.POST.email}}" required>
+                <label>Email</label>
+            </div>
+            <div class="label-float">
+                <input type="text" name="usuario" value="{{request.POST.usuario}}" required>    
+                <label>Usuário</label>
+            </div>
+            <div class="label-float">
+                <input type="password" name="senha" required>
+                <label>Senha</label>
+            </div>
+            <div class="label-float">
+                <input type="password" name="senha2" required>
+                <label>Repita sua senha</label>
+            </div>
+            <div class="justify-center">
+                <button type="submit" class="btn-login">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

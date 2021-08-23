@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+body{
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container-login {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.container-cad {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.card-login {
+    background-color: #14dbe9bd;
+    padding: 30px;
+    border-radius: 10%;
+    box-shadow: 4px 4px 1px 0px #00000060;
+}
+.card-cadastro {
+    background-color: #14dbe9bd;
+    padding: 30px;
+    border-radius: 10%;
+    box-shadow: 4px 4px 1px 0px #00000060;
+    width: 550px;
+}
+.card-senha {
+    background-color: #14dbe9bd;
+    padding: 30px;
+    border-radius: 10%;
+    box-shadow: 4px 4px 1px 0px #00000060;
+    width: 400px;
+}
+.card-senha-new {
+    background-color: #14dbe9bd;
+    padding: 30px;
+    border-radius: 10%;
+    box-shadow: 4px 4px 1px 0px #00000060;
+    width: 500px;
+}
+.h1-login {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000
+}
+.label-float input{
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #2d9246;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+.label-float input:focus{
+    border-bottom: 2px solid #2d9246;
+}
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.label-float label{
+    color: #2d9246;;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+.label-float input:focus + label,
+.label-float input:valid + label  {
+    font-size: 13px;
+    margin-top: 0;
+    color: #8ba38b;
+}
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+hr{
+    margin-top: 13%;
+    margin-bottom: 13%;
+    width: 70%;
+    color: rgb(68, 67, 67);
+}
+.btn-login{
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, 0.151);
+    color: rgb(19, 31, 29);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s ease-in;
+}
+.btn-login:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+.p-login{
+    color: rgb(41, 59, 59);
+}
+.a-login{
+    color: teal;
+    font-weight: bold;
+    text-decoration: none;
+}
+.a-login:hover{
+    color: rgb(0, 0, 0);
+}
+/* barra de navegação */
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+.menu-nav{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.menu-nav ul li a{
+    text-decoration: none;
+    color: rgb(238, 129, 129);
+    text-transform: uppercase;
+}
+.menu-nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fa0000;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: .5s;
+}
+.menu-nav ul li:hover::after{
+    width: 100%;
+}
+/* content */
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #000000;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #ff0000;
+    background: transparent;
+    color: #fa0000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #fa0000;
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: .4s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+    color: white;
+}

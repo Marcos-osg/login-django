@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Dev Marcos | Inicio {% endblock %}
+{% block content %}
+<h1>LOGIN / CADASTRO</h1>
+<br>
+<p>sistema de cadastro de usuario utilizando Python e Django</p><br>
+<p>Tambem conta com Recuperação de senha via smtp </p><br>
+<P>você pode testar utilizando o botão abaixo</P>
+<div>
+    <a href="{% url 'login' %}"><button type="button"><span></span>LOGIN</button></a>
+</div>
+{% endblock %}
